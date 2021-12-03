@@ -232,3 +232,9 @@ export default class Child extends Component {
 - Parent 组件：*getSnapshotBeforeUpdate()*
 - Child 组件：*componentDidMount()*
 - Parent 组件：*componentDidUpdate()*
+
+## 七、生命周期执行顺序总结
+
+- 当子组件自身状态改变时，不会触发父组件的生命周期；
+- 当父组件中状态发生变化（包括子组件的挂载以及卸载）时，会触发自身对应的生命周期以及子组件的更新；
+- 当子组件进行卸载时，自身只会执行它 componentWillUnmount 的生命周期。
